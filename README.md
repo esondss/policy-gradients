@@ -5,5 +5,5 @@
 ![openaigym](https://user-images.githubusercontent.com/53110326/81946457-f3702b80-9631-11ea-9afd-064e8b7a1ff3.gif)
 
 
-PG's learning is smoother than Q-learning, but update can only be may by the end of an episode. We compare two REINFORCE's, one ues z-score as bias and the other one uses state-value V(s). The figure below shows the total rewards from 50 iterations, each iteration has 10 episodes.
+PG's learning is smoother than Q-learning, but update can only be may by the end of an episode. We compare two REINFORCE's, one ues z-score as bias and the other one uses state-value V(s). The figure below shows the total rewards from 50 iterations, each iteration has 10 episodes. With parameters being the same, their results are very similar.
 ![fig](https://user-images.githubusercontent.com/53110326/82118978-34407f80-97ad-11ea-9582-c2ab63257b23.png)
