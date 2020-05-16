@@ -19,7 +19,7 @@ class PG(tf.keras.Model):
         state_value = tf.keras.layers.Dense(1)(x)
 
         # we seperate them because we want to mess with gradients of the shared gradients;
-        # an more efficient way is to use Model(inputs, outputs=[actions_probs, state_value])
+        # a more efficient way is to use Model(inputs, outputs=[actions_probs, state_value])
         # and use 1 optimizer. Here we use seperate them to demostrate Duel Gradient Decent.
         self.policy_function=tf.keras.models.Model(inputs=inputs, outputs=actions_probs)
         self.value_function=tf.keras.models.Model(inputs=inputs, outputs=state_value)
