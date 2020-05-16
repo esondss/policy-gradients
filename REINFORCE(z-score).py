@@ -5,6 +5,7 @@ import gym
 
 
 class REINFORCE(tf.keras.Model):
+    
     def __init__(self, state_size=4, action_size=2, layer_size=16):
         super(REINFORCE, self).__init__()
         self.policy_function=tf.keras.models.Sequential([
@@ -23,7 +24,7 @@ class REINFORCE(tf.keras.Model):
 
 class Session():
 
-    ''' Minus-bias version of REINFORCE 
+    ''' Minus-bias version of REINFORCE
 
     The Monte Carlo returns(discounted sample rewards) are substracted by z-scores computed
     form a iteration of game plays.
@@ -101,7 +102,7 @@ class Session():
             # action score
             all_final_rewards = self._discount_normalize_reward_over_n_episodes(all_rewards)
 
-            # update gradients
+            # weight policy gradients by returns
             all_mean_grads = []
             for var_index in range(len(policy_model.trainable_variables)):
                 mean_grads = tf.reduce_mean(
