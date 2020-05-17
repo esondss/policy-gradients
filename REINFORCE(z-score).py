@@ -141,6 +141,9 @@ class Session():
 
 
 if __name__ == '__main__':
+    
+    
+    env = gym.make("CartPole-v1")
 
     ''' unlock this to reproduce result
 
@@ -149,8 +152,6 @@ if __name__ == '__main__':
     tf.random.set_seed(42)
 
     '''
-
-    env = gym.make("CartPole-v1")
 
     model_arg={
         "state_size": 4,
